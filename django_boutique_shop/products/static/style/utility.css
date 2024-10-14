@@ -1,0 +1,68 @@
+.white{
+    color: white;
+}
+.menus li{
+    position: relative;
+}
+
+.menus li::after {
+    content: ''; /* Create a pseudo-element */
+    position: absolute;
+    left: 0; /* Start from the left */
+    bottom: -14px; /* Position at the bottom of li */
+    height: 2px; /* Height of the underline */
+    width: 100%; /* Full width */
+    background-color: black; /* Color of the underline */
+    transform: scaleX(0); /* Start with a scale of 0 (hidden) */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+li:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+}
+
+.viewall::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Background color on hover */
+    transition: left 0.5s ease; /* Transition for the sliding effect */
+    z-index: 0; /* Send to back */
+}
+
+.viewall:hover::before {
+    left: 0; /* Slide in on hover */
+    z-index: -1;
+}
+
+.viewall:hover {
+    color: black; /* Change text color on hover */
+    z-index: 1; /* Bring text in front of the background */
+}
+.card img:hover{
+    transform: scale(1.2);
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    background-color: #f0f0f0; /* Background color of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888; /* Darker thumb color on hover */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Background of the track */
+    border-radius: 6px; /* Rounded corners for the track */
+}
+

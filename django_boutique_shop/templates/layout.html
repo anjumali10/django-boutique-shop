@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static "style/style.css" %}>
+    <link rel="stylesheet" href={% static "style/utility.css" %}>
+    <title>Adan Boutique</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="uppermenus">
+                <div class="logo"><a href="home.html">Adan <img width="40" src={% static "assets/images/2023-05-07-removebg-preview.png" %} alt=""></a></div>
+                <div class="actions">
+                    <div class="account-link"><a href="#">Search</a></div>
+                    <div class="account-link"><a href="#">Login</a></div>
+                    <div class="cart"><a href="#">Cart (0)</a></div>
+                </div>
+            </div>
+            <div class="menus">
+                <ul>
+                    <li><a href="sale.html">Sale</a></li>
+                    <li><a href="lawn.html">Lawn</a></li>
+                    <li><a href="ocassionwear.html">Ocassion Wear</a></li>
+                    <li><a href="summerwear.html">Summer Wear</a></li>
+                    <li><a href="winterwear.html">Winter Wear</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="line topline"></div>
+        <div class="line"></div>
+        <div class="footer">
+            <div class="about">
+                <h2>About Adan Boutique</h2>
+                <p>Adan Boutique is a place where elegance meets tradition. Each piece is crafted with care, showcasing timeless designs and beautiful details. Inspired by classic styles and modern trends, Adan Boutique offers a collection that enhances your unique beauty. From graceful silhouettes to stunning accessories, every item invites you to express your personal style with charm and sophistication.</p>
+                <div class="social">
+                    <a href="#"><img src={% static "assets/images/facebook.svg" %} alt=""></a>
+                    <a href="#"><img src={% static "assets/images/instagram.svg" %} alt=""></a>
+                    <a href="#"><img src={% static "assets/images/tiktok.svg" %} alt=""></a>
+                </div>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Store Policies</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
