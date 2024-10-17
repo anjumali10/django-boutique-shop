@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href={% static "style/style.css" %}>
     <link rel="stylesheet" href={% static "style/utility.css" %}>
-    <title>Adan Boutique</title>
+    <title>{% block title %}Adan Boutique{% endblock %}</title>
 </head>
 
 <body>
@@ -23,8 +23,8 @@
             </div>
             <div class="menus">
                 <ul>
-                    <li><a href="sale.html">Sale</a></li>
-                    <li><a href="lawn.html">Lawn</a></li>
+                    <li><a href={% url "sale" %}>Sale</a></li>
+                    <li><a href={% url "lawn" %}>Lawn</a></li>
                     <li><a href="ocassionwear.html">Ocassion Wear</a></li>
                     <li><a href="summerwear.html">Summer Wear</a></li>
                     <li><a href="winterwear.html">Winter Wear</a></li>
@@ -32,6 +32,8 @@
             </div>
         </div>
         <div class="line topline"></div>
+        {% block main %}
+        {% endblock %}
         <div class="line"></div>
         <div class="footer">
             <div class="about">

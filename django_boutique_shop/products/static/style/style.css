@@ -144,6 +144,12 @@
 .card p {
     padding: 3px;
     font-size: 12px;
+    display: inline;
+}
+.card .discounted{
+    color: red;
+    text-decoration: line-through;
+    font-weight: bold;
 }
 
 .sectionHeading {

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}Adan Boutique - Lawn{% endblock %}
+{% block main %}
+<div class="main">
+    <div class="sectionHeading">
+        <p>
+            Lawn
+        </p>
+    </div>
+    <div class="cardContainer">
+        {% for product, images in products_with_images.items %}
+        <div id='card-width' class="card">
+            <div class="imgcontainer">
+                {% if images %}
+                    <img src="{{ images.1.image.url }}" alt="{{ images.1.alt_text }}">
+                {% else %}
+                    <img src="path/to/default/image.jpg" alt="No image available">
+                {% endif %}
+            </div>
+            <div class="card-content">
+                <p style = 'display: block'>{{ product.name }}</p>
+                <p>RS {{ product.price }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
