@@ -7,5 +7,6 @@ urlpatterns = [
     path('lawn', views.lawn, name = 'lawn'),
     path('ocassion', views.ocassion_wear, name = 'ocassion'),
     path('summer', views.summer_wear, name = 'summer'),
-    path('winter', views.winter_wear, name = 'winter')
+    path('winter', views.winter_wear, name = 'winter'),
+    path('product/<int:id>', views.product_detail, name = 'product_detail')
 ]

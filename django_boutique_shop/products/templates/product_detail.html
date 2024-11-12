@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title %}{{ product.name }}{% endblock %}
+{% block main %}
+<div class="main">
+        <div class="sections">
+            <div class="left">
+                <div class="images">
+                    {% for image in images %}
+                    <img src="{{image.image.url}}" alt="image">
+                    {% comment %} <img src="{{image.1.image.url}}" alt="image">
+                    <img src="{{image.2.image.url}}" alt="image"> {% endcomment %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="right">
+                <div class="details">
+                    <div class="name">{{product.name}}</div>
+                    <div class="sku">SKU: JH-0311-05-25</div>
+                    <div class="price">RS {{product.price}}</div>
+                </div>
+                <div class="size-selection">
+                    <label for="size">Size:</label>
+                    <div class="size-buttons">
+                        <button class="size-btn" data-size="small">S</button>
+                        <button class="size-btn" data-size="medium">M</button>
+                        <button class="size-btn" data-size="large">L</button>
+                    </div>
+                    <input type="hidden" id="selected-size" name="size" value="">
+                </div>
+                <a class="add-to-cart" type = 'submit' href="#">Add to Cart</a>
+                <a href="#" class="buy">Buy</a>
+                <div class="description">
+                    <h3>Description</h3>
+                    <p>{{product.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

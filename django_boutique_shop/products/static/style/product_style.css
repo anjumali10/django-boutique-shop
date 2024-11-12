@@ -2,7 +2,7 @@
     width: calc(100vw - 20px);
     display: grid;
     grid-template-columns: 60% 35%;
-    padding: 60px;
+    padding: 60px 150px 60px 150px;
     gap: 60px;
 }
 .sections .left, .right{
@@ -110,4 +110,7 @@
     margin-top: 20px;
     line-height: 30px;
     font-size: 12px;
+}
+.images img{
+    width: 600px;
 }
