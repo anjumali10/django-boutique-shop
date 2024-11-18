@@ -10,17 +10,19 @@
     <div class="cardContainer">
         {% for product, images in products_with_images.items %}
         <div id='card-width' class="card">
-            <div class="imgcontainer">
-                {% if images %}
-                    <img src="{{ images.0.image.url }}" alt="{{ images.0.alt_text }}">
-                {% else %}
-                    <img src="path/to/default/image.jpg" alt="No image available">
-                {% endif %}
-            </div>
-            <div class="card-content">
-                <p style = 'display: block'>{{ product.name }}</p>
-                <p>RS {{ product.price }}</p>
-            </div>
+            <a href="{% url 'product_detail' product.id %}" class="product-link">
+                <div class="imgcontainer">
+                    {% if images %}
+                        <img src="{{ images.0.image.url }}" alt="{{ images.0.alt_text }}">
+                    {% else %}
+                        <img src="path/to/default/image.jpg" alt="No image available">
+                    {% endif %}
+                </div>
+                <div class="card-content">
+                    <p style = 'display: block'>{{ product.name }}</p>
+                    <p>RS {{ product.price }}</p>
+                </div>
+            </a>
         </div>
         {% endfor %}
     </div>
